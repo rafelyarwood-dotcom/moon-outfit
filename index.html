@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1327">
+  <meta name="description" content="A little moonlight for your everyday style. Discover your personalized Moon Outfit.">
+  <title>Moon Outfit · Dress with your energy</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+ <main class="moon-page">
+  <header class="masthead"><h1>MOON OUTFIT</h1><p>Dress with your energy.</p></header>
+  <section class="moon-intro" aria-labelledby="moon-heading">
+   <p class="eyebrow">Tonight’s Moon</p><h2 id="moon-heading">Your moon awaits</h2>
+   <p id="moon-description">A little moonlight. A moment for yourself.<br>Find the style that feels like you.</p>
+   <p class="signature">Bigger. Brighter. You.</p>
+  </section>
+  <section class="glass input-panel" aria-labelledby="input-heading">
+   <h2 id="input-heading"><span aria-hidden="true">☾</span> Personal Energy Input <span class="sparkle" aria-hidden="true">✦</span></h2>
+   <p class="intro-copy">Tell us a little about yourself for your daily moon outfit.</p>
+   <form id="energy-form">
+    <div class="field-grid">
+     <label>Name<input name="name" placeholder="Your name" autocomplete="given-name" maxlength="60" required></label>
+     <label>Birth Date<input name="birthDate" type="date" min="1900-01-01" required></label>
+     <label>Birth Time<input name="birthTime" type="time" required></label>
+     <label>City / Time Zone<input name="city" placeholder="e.g. Kuala Lumpur / Asia/Kuala_Lumpur" maxlength="120" required></label>
+     <label class="full-width">Style Preference<input name="style" list="styles" placeholder="e.g. Elegant, Minimal, Romantic, Edgy…" maxlength="120" required></label>
+    </div>
+    <datalist id="styles"><option value="Elegant"><option value="Minimal"><option value="Romantic"><option value="Edgy"><option value="Casual"><option value="Androgynous"></datalist>
+    <button class="generate" type="submit"><span aria-hidden="true">✦</span> <span id="button-label">Generate My Moon Outfit</span> <span aria-hidden="true">✦</span></button>
+    <p class="privacy">Your details are sent to our AI provider only when you generate. They are not saved by this app.</p>
+    <p id="status" role="status" aria-live="polite"></p>
+   </form>
+  </section>
+  <section id="results" aria-label="Your moon outfit" aria-busy="false">
+   <div class="result-caption"><span id="result-label">A little inspiration · Sample reading</span><span id="reading-date"></span></div>
+   <div class="energy-strip glass">
+    <div class="energy-copy"><span class="micro">DAILY ENERGY</span><strong><span id="daily-energy">82</span><small> / 100</small></strong><div class="energy-track"><span id="energy-fill"></span></div></div>
+    <div class="power"><span class="color-orb" aria-hidden="true"></span><div><span class="micro">POWER COLOR</span><strong id="power-color">Moonlit Silver</strong></div></div>
+   </div>
+   <article class="glass outfit-card">
+    <div class="outfit-copy"><h2>Best Outfit <span class="sparkle" aria-hidden="true">✦</span></h2><p id="best-outfit">Silver satin top, ivory wide-leg trousers and delicate layered jewelry.</p><p class="tiny">Make a little room for radiance.</p></div>
+    <div class="outfit-image"><img src="/assets/outfit.webp" alt="Editorial inspiration: silver satin, ivory trousers and celestial jewelry" width="900" height="600"><span>Style inspiration</span></div>
+   </article>
+   <div class="detail-grid">
+    <article class="glass detail color-card"><span class="detail-icon" aria-hidden="true">⊘</span><h3>Avoid Color</h3><p id="avoid-color">Neon Orange</p></article>
+    <article class="glass detail scent-card"><span class="detail-icon" aria-hidden="true">❀</span><h3>Best Scent</h3><p id="best-scent">Jasmine</p></article>
+    <article class="glass detail crystal-card"><span class="detail-icon" aria-hidden="true">◇</span><h3>Best Crystal</h3><p id="best-crystal">Moonstone</p></article>
+    <article class="glass detail time-card"><span class="detail-icon" aria-hidden="true">☾</span><h3>Best Time</h3><p id="best-time">7:00 PM – 9:00 PM</p></article>
+   </div>
+   <div class="ritual-grid">
+    <article class="glass ritual"><h2><span aria-hidden="true">☾</span> Do <span class="sparkle" aria-hidden="true">✦</span></h2><ul id="do-list"><li>Express yourself</li><li>Create something beautiful</li><li>Connect with a friend</li></ul></article>
+    <article class="glass ritual"><h2><span aria-hidden="true">☾</span> Avoid <span class="sparkle" aria-hidden="true">✦</span></h2><ul id="avoid-list"><li>Impulse shopping</li><li>Overthinking your look</li><li>Comparing yourself to others</li></ul></article>
+   </div>
+   <div class="affirmation"><span class="micro">YOUR DAILY AFFIRMATION</span><p id="affirmation">“I give myself permission to shine in my own way.”</p><span aria-hidden="true">✧ ─── ☾ ─── ✧</span></div>
+  </section>
+  <footer>Style inspiration &amp; self-reflection. Energy, crystals and timing are creative suggestions, not predictions.<br>Moon phase is approximate. Artwork is decorative; outfit imagery does not change with each reading.</footer>
+ </main>
+</body>
+</html>
